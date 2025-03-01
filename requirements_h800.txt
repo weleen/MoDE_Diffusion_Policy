@@ -24,5 +24,5 @@ termcolor
 wandb
 einops_exts
 flash_attn==2.7.3
-git+git@gitee.com:geekyzql/CLIP.git
+git+https://gitee.com/geekyzql/CLIP.git
 timm
