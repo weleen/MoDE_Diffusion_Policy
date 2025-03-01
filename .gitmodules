@@ -1,8 +1,8 @@
 [submodule "LIBERO"]
 	path = LIBERO
-	url = git@gitee.com:weleen/LIBERO.git
+	url = git@github.com:weleen/LIBERO.git
 	branch = f78abd6
 [submodule "calvin_env"]
 	path = calvin_env
-	url = git@gitee.com:weleen/calvin_env.git
+	url = git@github.com:weleen/calvin_env.git
 	branch = 797142c
