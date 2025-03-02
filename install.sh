@@ -33,5 +33,6 @@ pip install numpy~=1.23
 echo "Installing LIBERO done"
 cd ..
 
+# when gpu device is over a100, replace the requirements.txt with requirements_h800.txt
 pip install -r requirements.txt
 echo "Requirements installed"
