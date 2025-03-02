@@ -10,16 +10,15 @@ eval_cfg_overwrite:
   model:
     num_sampling_steps: 5
 
-# train_folder: /home/yagmurlu/code/MoDE_Diffusion_Policy/pretrained/
-train_folder: /public/home/group_xudong/yimingwu/project/MyProjects/LightVLA/examples/MoDE/
-checkpoint: d_ema=0
+# train_folder: /home/yiming/pretrained_models/MoDE
+train_folder: /public/home/group_xudong/yimingwu/pretrained_models/MoDE
+checkpoint: MoDE_CALVIN_D # MoDE_CALVIN_ABCD, MoDE_CALVIN_ABC
 device: 0
 
-
-log_dir: /public/home/group_xudong/yimingwu/project/MyProjects/LightVLA/examples/MoDE/outputs/d_ema
-dataset_path: /public/home/group_xudong/yimingwu/project/MyProjects/LightVLA/examples/MoDE/dataset/dataset/calvin_debug_dataset
-# log_dir: /home/yagmurlu/code/MoDE_Diffusion_Policy/outputs/d_ema
-# dataset_path: /home/yagmurlu/code/mdt_policy/dataset/calvin_debug_dataset
+# log_dir: /home/yiming/project/MyProjects/LightVLA/examples/MoDE/outputs/${checkpoint}
+# dataset_path: /home/yiming/project/MyProjects/LightVLA/examples/MoDE/dataset/dataset/task_D_D # task_D_D, task_ABCD_D
+log_dir: /public/home/group_xudong/yimingwu/project/MyProjects/LightVLA/examples/MoDE/outputs/${checkpoint}
+dataset_path: /public/home/group_xudong/yimingwu/project/MyProjects/LightVLA/examples/MoDE/dataset/dataset/task_D_D # task_D_D, task_ABCD_D
 num_videos: 30
 debug: False
 
