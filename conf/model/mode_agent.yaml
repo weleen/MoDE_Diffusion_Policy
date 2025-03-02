@@ -13,6 +13,7 @@ sigma_min: 0.001
 sigma_max: 80
 noise_scheduler: 'exponential'
 sigma_sample_density_type: 'loglogistic' # 'loglogistic' or 'loguniform'
+# ckpt_path: '/home/yiming/pretrained_models/MoDE/MoDE_Pretrained'
 ckpt_path: '/public/home/group_xudong/yimingwu/pretrained_models/MoDE/MoDE_Pretrained'
 start_from_pretrained: True
 act_window_size: ${act_seq_len}
