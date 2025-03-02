@@ -352,5 +352,5 @@ def main(cfg):
 if __name__ == "__main__":
     # Set CUDA device IDs
     os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
-    os.environ["CUDA_VISIBLE_DEVICES"] = "4"
+    # os.environ["CUDA_VISIBLE_DEVICES"] = "4"
     main()
