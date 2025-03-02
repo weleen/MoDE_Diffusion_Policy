@@ -26,3 +26,4 @@ einops_exts
 flash_attn==2.7.3
 git+https://gitee.com/geekyzql/CLIP.git
 timm
+seaborn
