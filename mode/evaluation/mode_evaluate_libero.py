@@ -62,8 +62,12 @@ from mode.evaluation.utils import get_env_state_for_initial_condition, join_vis_
 from mode.rollout.rollout_video import RolloutVideo
 from typing import Any, Dict, Tuple, Union
 
+import logging
+# 初始化logger
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
-log_print = logging.getLogger(__name__)
+log_print = logger.info
 
 def get_log_dir(log_dir):
     if log_dir is not None:
@@ -148,7 +152,7 @@ class EvaluateLibero:
 
         result_array = sum(successes) / len(successes)
 
-        # print(f"number of rollouts: {len(successes)}")
+        print(f"number of rollouts: {len(successes)}")
         log_print(f"eval_lh/avg_seq_len success rate {torch.tensor(result_array)}")
         wandb.log("eval_lh/avg_seq_len", torch.tensor(result_array), on_epoch=True, sync_dist=True)
 
@@ -336,6 +340,8 @@ def main(cfg):
         task_embedding_format=cfg.task_embedding_format,
         device=cfg.device,
     )
+
+    eval_libero.start()
 
     if cfg.log_wandb:
         os.makedirs(log_dir / "wandb", exist_ok=False)
